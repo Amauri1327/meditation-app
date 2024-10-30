@@ -1,17 +1,20 @@
-import { Image, StyleSheet, View, Text, Platform } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native'
+import React from 'react'
 
-export default function HomeScreen() {
+import beachImage from "@/assets/meditation-images/beach.webp"
+
+const App = () => {
   return (
-    <View className="flex-1 justify-center items-center">
-      <Text>Hello world</Text>
+    <View className='flex-1'>
+      <ImageBackground
+      source={beachImage}
+      resizeMode='cover'
+      className='flex-1'
+      >
+      <Text className=''>App</Text>
+      </ImageBackground>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  }
-});
+export default App
